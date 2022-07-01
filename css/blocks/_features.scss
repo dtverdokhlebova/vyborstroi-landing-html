@@ -1,0 +1,46 @@
+.features {
+  &__ui-h2 {
+    margin-bottom: 100px;
+    @include media-laptop {
+      margin-bottom: 60px;
+    }
+    @include media-tablet {
+      margin-bottom: 35px;
+      text-align: center;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 105px 130px;
+    @include media-laptop {
+      gap: 45px;
+    }
+    @include media-tablet {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+  }
+  &__icon {
+    width: 75px;
+    margin: 0 auto 20px;
+    @include media-laptop {
+      width: 65px;
+    }
+    @include media-tablet {
+      width: 55px;
+      margin-bottom: 15px;
+    }
+  }
+  &__text {
+    font: 400 21px/1.2 $font;
+    text-align: center;
+    color: $blue;
+    @include media-laptop {
+      font-size: 18px;
+    }
+    @include media-tablet {
+      font-size: 16px;
+    }
+  }
+}

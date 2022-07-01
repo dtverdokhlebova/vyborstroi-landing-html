@@ -1,0 +1,54 @@
+.header {
+  background: #fff;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 22px 0;
+    @include media-tablet {
+      padding: 12px 0;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 228px;
+    margin-right: 85px;
+    @include media-laptop {
+      margin-right: 30px;
+    }
+    @include media-tablet {
+      width: 106px;
+    }
+  }
+  &__menu {
+    display: flex;
+    margin-right: 40px;
+    font: 18px/1.2 $font;
+    list-style-type: none;
+    @include media-laptop {
+      display: none;
+      font-size: 16px;
+      margin-right: 25px;
+    }
+    &-li {
+      &:not(:last-child) {
+        margin-right: 38px;
+      }
+    }
+  }
+  &__ui-button {
+    margin-left: 30px;
+    @include media-tablet {
+      display: none;
+    }
+  }
+  &__phone {
+    margin-left: auto;
+    font-size: 18px;
+    @include media-laptop {
+      font-size: 16px;
+    }
+    @include media-tablet {
+      font-size: 12px;
+    }
+  }
+}

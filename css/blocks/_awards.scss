@@ -1,0 +1,56 @@
+.awards {
+  &__ui {
+    &-h2 {
+      margin-bottom: 60px;
+      @include media-laptop {
+        margin-bottom: 45px;
+      }
+      @include media-tablet {
+        margin-bottom: 25px;
+      }
+    }
+    &-swiper-button {
+      &-prev,
+      &-next {
+        @include media-tablet {
+          display: none;
+        }
+      }
+    }
+  }
+  &__slider {
+    position: relative;
+    @include media-custom(1620px) {
+      padding: 0 80px;
+    }
+    @include media-tablet {
+      padding: 0;
+    }
+    .swiper {
+      @include media-tablet {
+        overflow: visible;
+      }
+      &-slide {
+        border-radius: 9px;
+        overflow: hidden;
+        @include media-tablet {
+          width: 145px;
+        }
+      }
+      &-button {
+        &-prev {
+          left: -80px;
+          @include media-custom(1620px) {
+            left: 0;
+          }
+        }
+        &-next {
+          right: -80px;
+          @include media-custom(1620px) {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}

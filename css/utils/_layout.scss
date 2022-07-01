@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none !important;
+}
+html {
+  box-sizing: border-box;
+  line-height: 1;
+  &.ov-hidden,
+  &.with-fancybox {
+    overflow: hidden;
+    body {
+      overflow: hidden;
+    }
+  }
+}
+body {
+  margin: 0;
+}
+a {
+  transition: ease 0.3s;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  image-rendering: -webkit-optimize-contrast;
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: $font;
+  color: $greyDark;
+  .inner {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .text {
+    &-blue {
+      color: $blue;
+    }
+  }
+  .main {
+    flex: 1 0;
+  }
+}

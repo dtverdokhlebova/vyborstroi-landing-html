@@ -1,0 +1,34 @@
+.achievements {
+  margin-top: 60px;
+  @include media-laptop {
+    margin-top: 40px;
+  }
+  @include media-tablet {
+    margin-top: 20px;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &__item {
+    @include media-tablet {
+      width: 68px;
+    }
+  }
+  .swiper {
+    @include media-tablet {
+      overflow: visible;
+    }
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 32px 38px;
+      @include media-laptop {
+        gap: 20px;
+      }
+      @include media-tablet {
+        display: flex;
+        gap: unset;
+      }
+    }
+  }
+}

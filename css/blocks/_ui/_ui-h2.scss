@@ -1,0 +1,13 @@
+.ui-h2 {
+  margin: 0;
+  font: 500 43px/1.2 $font;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $blue;
+  @include media-laptop {
+    font-size: 32px;
+  }
+  @include media-tablet {
+    font-size: 24px;
+  }
+}

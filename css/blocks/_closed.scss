@@ -1,0 +1,67 @@
+.closed {
+  position: relative;
+  max-width: 1260px;
+  margin: 0 auto;
+  background: url('../img/closed_img.webp') no-repeat top center;
+  background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
+  @include media-tablet {
+    margin: 0 -15px;
+    background-size: auto 138%;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 930px;
+    max-height: 340px;
+    background: #fff;
+    filter: blur(190px);
+    @include media-tablet {
+      filter: blur(100px);
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 1;
+    min-height: 480px;
+    padding: 105px 90px;
+    color: $blue;
+    @include media-laptop {
+      min-height: 380px;
+      padding: 80px 60px;
+    }
+    @include media-tablet {
+      min-height: unset;
+      padding: 80px 35px;
+      text-align: center;
+    }
+  }
+  &__title {
+    margin-bottom: 25px;
+    font: 600 53px/1.2 $font;
+    text-transform: uppercase;
+    @include media-laptop {
+      font-size: 38px;
+    }
+    @include media-tablet {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+  }
+  &__descr {
+    margin-bottom: 30px;
+    font: 42px/1.2 $font;
+    text-transform: uppercase;
+    @include media-laptop {
+      font-size: 30px;
+    }
+    @include media-tablet {
+      margin-bottom: 25px;
+      font-size: 21px;
+    }
+  }
+}
