@@ -342,9 +342,18 @@ img {
   }
 }
 
-.ui-button:hover {
-  color: #1e4c9a;
-  background: #fff;
+@media (min-width: 1025px) {
+  .ui-button:hover {
+    color: #1e4c9a;
+    background: #fff;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ui-button:active {
+    color: #1e4c9a;
+    background: #fff;
+  }
 }
 
 .ui-button:disabled {
@@ -961,13 +970,19 @@ img {
   max-height: 340px;
   background: #fff;
   -webkit-filter: blur(190px);
-          filter: blur(190px);
+  -moz-filter: blur(190px);
+  -o-filter: blur(190px);
+  -ms-filter: blur(190px);
+  filter: blur(190px);
 }
 
 @media (max-width: 767px) {
   .closed::before {
     -webkit-filter: blur(100px);
-            filter: blur(100px);
+    -moz-filter: blur(100px);
+    -o-filter: blur(100px);
+    -ms-filter: blur(100px);
+    filter: blur(100px);
   }
 }
 
@@ -1759,11 +1774,17 @@ img {
 .offers__list li::before {
   content: '';
   position: absolute;
-  top: 0.6em;
+  top: 9px;
   left: 0;
   width: 26px;
   height: 1px;
   background: currentColor;
+}
+
+@media (max-width: 767px) {
+  .offers__list li::before {
+    top: 6px;
+  }
 }
 
 .offers__list li:not(:last-child) {
@@ -1789,9 +1810,6 @@ img {
 }
 
 .offers__footnote {
-  width: 88%;
-  max-width: 255px;
-  margin: 0 auto;
   font: 300 13px/1.3 "Roboto", "Arial", sans-serif;
   letter-spacing: 0.1em;
   text-align: center;

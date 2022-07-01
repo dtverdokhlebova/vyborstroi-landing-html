@@ -58,20 +58,29 @@ function bannerSlider() {
 
 function achievementsSlider() {
   if ($('.achievements').length > 0) {
-    const achievementsSwiper = new Swiper('.achievements .swiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 15,
-      centeredSlides: true,
-      centeredSlidesBounds: true,
-      initialSlide: 2,
-      init: false
-    })
-    if ($(window).width() < 768) {
-      achievementsSwiper.init()
+    const breakpoint = window.matchMedia('(min-width:768px)')
+    let achievementsSwiper
+
+    const enableSwiper = function () {     
+      achievementsSwiper = new Swiper('.achievements .swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+        initialSlide: 2
+      })
     }
-    window.addEventListener('resize', function () {
-      $(window).width() > 767 ? achievementsSwiper.destroy() : achievementsSwiper.init()
+    const breakpointChecker = function () {
+      if (breakpoint.matches === true) {
+        if (achievementsSwiper !== undefined) achievementsSwiper.destroy(true, true)
+      } else if (breakpoint.matches === false) {
+        return enableSwiper()
+      }
+    }
+    breakpoint.addEventListener('change', () => {
+      breakpointChecker()
     })
+    breakpointChecker()
   }
 }
 
