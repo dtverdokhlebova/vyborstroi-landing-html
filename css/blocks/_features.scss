@@ -23,12 +23,15 @@
   }
   &__icon {
     width: 75px;
+    height: 77px;
     margin: 0 auto 20px;
     @include media-laptop {
       width: 65px;
+      height: 67px;
     }
     @include media-tablet {
       width: 55px;
+      height: 56px;
       margin-bottom: 15px;
     }
   }

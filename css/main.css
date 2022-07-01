@@ -1296,18 +1296,21 @@ img {
 
 .features__icon {
   width: 75px;
+  height: 77px;
   margin: 0 auto 20px;
 }
 
 @media (max-width: 1450px) {
   .features__icon {
     width: 65px;
+    height: 67px;
   }
 }
 
 @media (max-width: 767px) {
   .features__icon {
     width: 55px;
+    height: 56px;
     margin-bottom: 15px;
   }
 }
@@ -1747,10 +1750,10 @@ img {
 }
 
 .offers__list {
-  margin: 0 0 25px;
+  margin-bottom: 25px;
   padding: 0;
   font: 16px/1.2 "Roboto", "Arial", sans-serif;
-  list-style-type: none;
+  list-style: inside url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iIzVENUQ1RCIgZD0iTTAgM2gyN3YxSDB6Ii8+PC9zdmc+");
 }
 
 @media (max-width: 767px) {
@@ -1760,31 +1763,8 @@ img {
   }
 }
 
-.offers__list li {
-  position: relative;
-  padding-left: 40px;
-}
-
-@media (max-width: 767px) {
-  .offers__list li {
-    padding-left: 35px;
-  }
-}
-
-.offers__list li::before {
-  content: '';
-  position: absolute;
-  top: 9px;
-  left: 0;
-  width: 26px;
-  height: 1px;
-  background: currentColor;
-}
-
-@media (max-width: 767px) {
-  .offers__list li::before {
-    top: 6px;
-  }
+.offers__list li::marker {
+  margin-right: 20px;
 }
 
 .offers__list li:not(:last-child) {
